@@ -3,6 +3,7 @@
 
 	<excludes>
         <pattern>/rss/*</pattern>
+        <pattern>/websocket/*</pattern>
         <pattern>*.json</pattern>
     </excludes>
 

@@ -23,7 +23,7 @@ import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @EnableWebMvc
-@ComponentScan(basePackages = "com.servlet3.sample")
+@ComponentScan(basePackages = "com.spring4.servlet3.sample")
 public class WebConfig extends WebMvcConfigurerAdapter {	
 
 	@Override

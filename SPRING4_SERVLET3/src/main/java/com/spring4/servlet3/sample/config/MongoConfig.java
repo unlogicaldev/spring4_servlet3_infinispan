@@ -16,7 +16,7 @@ import com.spring4.servlet3.sample.common.mongo.MongoTemplate;
  * </PRE>
  *
  */
-//@Configuration
+@Configuration
 public class MongoConfig {
 	
 	@Autowired Environment env;

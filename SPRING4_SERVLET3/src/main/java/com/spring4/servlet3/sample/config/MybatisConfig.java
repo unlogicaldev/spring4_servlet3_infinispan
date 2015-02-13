@@ -10,10 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.DefaultResourceLoader;
-import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
 @Configuration
-@MapperScan("org.lanyonm.playground.persistence")
+@MapperScan("com.spring4.servlet3.model.mapper")
 public class MybatisConfig {
 		
 	@Bean
@@ -38,7 +37,7 @@ public class MybatisConfig {
 	public SqlSessionFactory sqlSessionFactory2(DataSource dataSource2) throws Exception{
 		SqlSessionFactoryBean sb = new SqlSessionFactoryBean();
 		sb.setDataSource(dataSource2);
-		sb.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:com/servlet3/sample/model/mapper/*.xml"));
+//		sb.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:com/servlet3/sample/model/mapper/*.xml"));
 		sb.setConfigLocation(new DefaultResourceLoader().getResource("classpath:config_mybatis.xml"));
 		return sb.getObject();
 	}
