@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Test" >
+	<select id="selectTestList" parameterType="DBObject" resultType="DBObject">
+		SELECT GM_CODE AS GAME_CODE,GM_NAME AS GAME_NAME
+		FROM tb_game
+	</select>
+	<select id="selectTestListPost" parameterType="DBObject" resultType="DBObject">
+		select
+			*
+		from rhq_advisory
+	</select>
+	<select id="selectTest" parameterType="String" resultType="DBObject">
+		select id, test from TEST where id = #{id}
+	</select>
+	<insert id="insertTest" parameterType="DBObject">
+		<selectKey keyProperty="id" order="AFTER" resultType="string">select last_insert_id()</selectKey>
+		insert into TEST(test)
+		value(#{test})
+	</insert>
+	<update id="updateTest" parameterType="DBObject">
+		update TEST set
+		test = #{test}
+		where id = #{id}
+	</update>
+</mapper>
