@@ -24,24 +24,32 @@ public class MongoTest_01_CRUD extends BaseTest {
 								.append("age", 29)
 								.append("sex", 1)
 								.append("type", 6)
+								.append("id", "1")
+								.append("pass", "1")
 								.append("regDate", DateUtil.getToday("yyyyMMddHHmmss"));
 
 		DBObject o2 = new BasicDBObject("name", "Ari")
-								.append("age", 23)
+								.append("age", 19)
 								.append("sex", 0)
 								.append("type", 3)
+								.append("id", "2")
+								.append("pass", "2")
 								.append("regDate", DateUtil.getToday("yyyyMMddHHmmss"));
 
 		DBObject o3 = new BasicDBObject("name", "Atrox")
-								.append("age", 29)
+								.append("age", 12)
 								.append("sex", 1)
 								.append("type", 5)
+								.append("id", "3")
+								.append("pass", "3")
 								.append("regDate", DateUtil.getToday("yyyyMMddHHmmss"));
 
 		DBObject o4 = new BasicDBObject("name", "Atrox")
 								.append("age", 29)
 								.append("sex", 1)
 								.append("type", 5)
+								.append("id", "4")
+								.append("pass", "4")
 								.append("regDate", DateUtil.getToday("yyyyMMddHHmmss"));
 		
 		DBCollection c = MongoTemplate.getDBCollection("TEST");

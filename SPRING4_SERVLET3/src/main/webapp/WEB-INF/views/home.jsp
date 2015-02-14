@@ -13,7 +13,7 @@
 			<p>
 				<spring:message code="message.welcome"/>
 			</p>
-			<p><a class="btn btn-primary btn-large" href="http://geowarin.wordpress.com"><spring:message code="message.home.learnMore"/></a></p>
+			<p><a class="btn btn-primary btn-large" href="https://github.com/unlogicaldev/spring4_servlet3_infinispan"><spring:message code="message.home.learnMore"/></a></p>
 			
 		</div>
 		

@@ -33,6 +33,10 @@ public abstract class AbstractBaseController<T> {
 		return id;
 	}
 	
+	protected boolean isLoginByRequest(HttpServletRequest req){
+		return req.getAttribute("SESSION_INFO") != null;
+	}
+	
 	/**
 	 * 모든 에러케이스에 전부 적용시키는 에러헨들러 이다.
 	 * Exception을 다시 던지는 이유 --> 모든 ajax요청에 Error처리가 되어있음.
