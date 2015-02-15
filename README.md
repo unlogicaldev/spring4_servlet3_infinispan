@@ -3,7 +3,7 @@ width infinispan mongodb mysql ...
 
 2015 JBUG KOREA MEETUP 행사 DEMO PROJECT 사용
 
-적용된 프로젝트들
+적용된 기술들
 
 spring4 servlet3 javaconfig
 mysql
